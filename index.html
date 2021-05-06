@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <title>Home</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
@@ -13,20 +13,47 @@
     crossorigin="anonymous"
   />
 </head>
-<body class="body" style="margin: 0px auto">
-  <div class="header">
+<body
+  class="container"
+  style="display: grid; grid-template-rows: 33vh 33vh 33vh"
+>
+  <div
+    class="header"
+    style="
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+    "
+  >
     <img
       class="pic"
-      style="border-radius: 180px; height: 150px; width: 150px"
+      style="
+        border-radius: 180px;
+        height: 150px;
+        width: 150px;
+        margin-right: 20px;
+      "
       src="images/pic.png"
     />
-    <div class="info">
-      <div class="clock">
+    <div class="info" style="text-align: right; width: 100%">
+      <div
+        class="clock"
+        style="
+          display: flex;
+          justify-content: right;
+          font-family: iosevka;
+          font-weight: Medium;
+          font-size: 64px;
+        "
+      >
         <div id="hour" class=""></div>
         <div id="separator" class=""></div>
         <div id="minutes" class=""></div>
       </div>
-      <div class="info_down">
+      <div class="info_down" style="display: flex; justify-content: right">
         <div id="day" class=""></div>
         <div id="month" class=""></div>
         <div id="year" class=""></div>
@@ -37,14 +64,19 @@
       </div>
     </div>
   </div>
-  <form id="form" role="search">
+  <form
+    id="form"
+    role="search"
+    style="display: flex; justify-content: center; margin-top: 30px"
+  >
     <div class="middle">
       <input
-        class="url"
+        class="url rounded-pill"
         type="search"
         id="query"
         name="q"
         placeholder="Search With DuckDuckGo"
+        style="width: 60vh; height: 6vh"
       />
     </div>
     <script>
@@ -61,89 +93,82 @@
       f.addEventListener("submit", submitted);
     </script>
   </form>
-  <div class="bookmarks">
-    <div class="menu_place">
-      <div class="menu_name">General</div>
-      <div class="list">
-        <div class="in_list">
-          <a class="link_text" href="https://mail.google.com/mail/u/0/#inbox"
-            >Mail</a
-          >
-        </div>
-        <div class="in_list">
-          <a
-            class="link_text"
-            href="https://drive.google.com/drive/u/0/my-drive"
-            >Drive</a
-          >
-        </div>
-        <div class="in_list">
-          <a
-            class="link_text"
-            href="https://calendar.google.com/calendar/u/0/r?pli=1"
-            >Calender</a
-          >
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://en.wikipedia.org/wiki/Main_Page"
-            >Wiki</a
-          >
-        </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col btn btn-secondary disabled">General</div>
+      <div class="col btn btn-secondary disabled">Tech</div>
+      <div class="col btn btn-secondary disabled">Fun</div>
+      <div class="col btn btn-secondary disabled">World</div>
+    </div>
+
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://mail.google.com/mail/u/0/#inbox"
+          >Mail</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://github.com/">GitHub</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.netflix.com/browse">Netflix</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.reddit.com/">Reddit</a>
       </div>
     </div>
-    <div class="menu_place">
-      <div class="menu_name">Tech</div>
-      <div class="list">
-        <div class="in_list">
-          <a class="link_text" href="https://github.com/">GitHub</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://www.w3schools.com/">W3C</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://www.udemy.com/">Udemy</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://free4arab.net/">Free4arab</a>
-        </div>
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://drive.google.com/drive/u/0/my-drive"
+          >Drive</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.w3schools.com/">W3C</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.faselhd.pro/home">FaselHD</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.reddit.com/r/unixporn/"
+          >r/unixporn</a
+        >
       </div>
     </div>
-    <div class="menu_place">
-      <div class="menu_name">Fun</div>
-      <div class="list">
-        <div class="in_list">
-          <a class="link_text" href="https://www.netflix.com/browse">Netflix</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://www.faselhd.pro/home">FaselHD</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://unsplash.com/">UnSplash</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://www.figma.com">Figma</a>
-        </div>
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a
+          class="link_text"
+          href="https://calendar.google.com/calendar/u/0/r?pli=1"
+          >Calender</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.udemy.com/">Udemy</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://unsplash.com/">UnSplash</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://twitter.com/">Twitter</a>
       </div>
     </div>
-    <div class="menu_place">
-      <div class="menu_name">World</div>
-      <div class="list">
-        <div class="in_list">
-          <a class="link_text" href="https://www.reddit.com/">Reddit</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://www.reddit.com/r/unixporn/"
-            >r/unixporn</a
-          >
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://twitter.com/">Twitter</a>
-        </div>
-        <div class="in_list">
-          <a class="link_text" href="https://translate.google.com/"
-            >Translate</a
-          >
-        </div>
+
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://en.wikipedia.org/wiki/Main_Page"
+          >Wiki</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://free4arab.net/">Free4arab</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.figma.com">Figma</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://translate.google.com/">Translate</a>
       </div>
     </div>
   </div>
@@ -151,3 +176,10 @@
   <script src="js/time.js"></script>
   <script src="js/weather.js"></script>
 </body>
+
+<style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
