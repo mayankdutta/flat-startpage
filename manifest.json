@@ -11,10 +11,7 @@
   },
 
   "background": {
-      "scripts": [
-          "js/time.js",
-          "js/weather.js"
-    ]
+    "scripts": ["js/time.js", "js/weather.js"]
   },
 
   "chrome_url_overrides": {

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+    crossorigin="anonymous"
+  />
+</head>
+<body
+  class="container"
+  style="display: grid; grid-template-rows: 33vh 33vh 33vh"
+>
+  <div
+    class="header"
+    style="
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+    "
+  >
+    <img
+      class="pic"
+      style="
+        border-radius: 180px;
+        height: 150px;
+        width: 150px;
+        margin-right: 20px;
+      "
+      src="images/pic.png"
+    />
+    <div class="info" style="text-align: right; width: 100%">
+      <div
+        class="clock"
+        style="
+          display: flex;
+          justify-content: right;
+          font-family: iosevka;
+          font-weight: Medium;
+          font-size: 64px;
+        "
+      >
+        <div id="hour" class=""></div>
+        <div id="separator" class=""></div>
+        <div id="minutes" class=""></div>
+      </div>
+      <div class="info_down" style="display: flex; justify-content: right">
+        <div id="day" class=""></div>
+        <div id="month" class=""></div>
+        <div id="year" class=""></div>
+        <div>&nbsp;•&nbsp;</div>
+        <div class="temperature-value">
+          <p class="" style="margin-top: 0px">- °<span class="g">c</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form
+    id="form"
+    role="search"
+    style="display: flex; justify-content: center; margin-top: 30px"
+  >
+    <div class="middle">
+      <input
+        class="url rounded-pill"
+        type="search"
+        id="query"
+        name="q"
+        placeholder="Search With DuckDuckGo"
+        style="width: 60vh; height: 6vh"
+      />
+    </div>
+    <script>
+      const f = document.getElementById("form");
+      const q = document.getElementById("query");
+      const search = "https://duckduckgo.com/?t=ffab&q=";
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = search + q.value + "&ia=web";
+        window.open(url, "_self");
+      }
+
+      f.addEventListener("submit", submitted);
+    </script>
+  </form>
+
+  <div class="container">
+    <div class="row">
+      <div class="col btn btn-secondary disabled">General</div>
+      <div class="col btn btn-secondary disabled">Tech</div>
+      <div class="col btn btn-secondary disabled">Fun</div>
+      <div class="col btn btn-secondary disabled">World</div>
+    </div>
+
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://mail.google.com/mail/u/0/#inbox"
+          >Mail</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://github.com/">GitHub</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.netflix.com/browse">Netflix</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.reddit.com/">Reddit</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://drive.google.com/drive/u/0/my-drive"
+          >Drive</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.w3schools.com/">W3C</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.faselhd.pro/home">FaselHD</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.reddit.com/r/unixporn/"
+          >r/unixporn</a
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a
+          class="link_text"
+          href="https://calendar.google.com/calendar/u/0/r?pli=1"
+          >Calender</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.udemy.com/">Udemy</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://unsplash.com/">UnSplash</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://twitter.com/">Twitter</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://en.wikipedia.org/wiki/Main_Page"
+          >Wiki</a
+        >
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://free4arab.net/">Free4arab</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://www.figma.com">Figma</a>
+      </div>
+      <div class="col btn btn-outline-secondary">
+        <a class="link_text" href="https://translate.google.com/">Translate</a>
+      </div>
+    </div>
+  </div>
+  <!--Scripts-->
+  <script src="js/time.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+
+<style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
