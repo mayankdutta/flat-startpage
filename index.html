@@ -14,55 +14,60 @@
   />
 </head>
 <body
-  class="container"
-  style="display: grid; grid-template-rows: 25vh 25vh 25vh 25vh"
+  class="container "
+  style="display: grid; grid-template-rows: 25vh 25vh 25vh 25vh; row-gap: 8vh; margin-top: 15vh;"
 >
   <div
     class="header"
     style="
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: auto;
       grid-template-rows: auto;
       justify-content: center;
       align-items: center;
       justify-items: center;
     "
   >
-    <img
-      class="pic"
-      style="
-        border-radius: 180px;
-        height: 150px;
-        width: 150px;
-        margin-right: 20px;
-      "
-      src="images/pic.png"
-    />
+    <!-- <img class="pic" style=" border-radius: 180px; height: 150px; width: 150px; margin-right: 20px; " src="images/pic.png" /> -->
+        <div class="display-4">Hi, User
+        <span id="data" class="display-2"></span>
+      </div>
     <div class="info" style="text-align: right; width: 100%">
       <div
-        class="clock"
+        class="clock lead"
         style="
-          display: flex;
-          justify-content: right;
-          font-family: iosevka;
-          font-weight: Medium;
-          font-size: 64px;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        
+        justify-items: center;
+        align-items: center;
+        
+        justify-content:center;
+        align-content: center;
         "
       >
-        <div id="hour" class=""></div>
-        <div id="separator" class=""></div>
-        <div id="minutes" class=""></div>
+      <div class="mx-4">
+        <span id="hour" class=""></span>
+        <span id="separator" class=""></span>
+        <span id="minutes" class=""></span>
       </div>
-      <div class="info_down" style="display: flex; justify-content: right">
-        <div id="day" class=""></div>
-        <div id="month" class=""></div>
-        <div id="year" class=""></div>
-        <div>&nbsp;•&nbsp;</div>
-        <div class="temperature-value">
+
+      <div class="mx-4">
+        <span id="day" class=""></span>
+        <span id="month" class=""></span>
+        <span id="year" class=""></span>
+      </div>
+      <div class="mx-4">
+        <span>&nbsp;•&nbsp;</span>
+        <span class="temperature-value">
           <p class="" style="margin-top: 0px">- °<span class="g">c</span></p>
-        </div>
+        </span>
       </div>
     </div>
+
+  </div>
   </div>
   <form
     id="form"
@@ -71,7 +76,7 @@
   >
     <div class="middle">
       <input
-        class="url rounded-pill"
+        class="url rounded-pill lead"
         type="search"
         id="query"
         name="q"
@@ -96,49 +101,49 @@
 
   <div class = "container row">
   <div class="col card text-center text-white bg-dark mx-2" style="width: 18rem">
-      <h5 class="card-header">General</h5>
+      <h5 class="card-header display-6">General</h5>
     <div class="card-body">
       <p class="card-text">
-        <div class="in_list"><a class="text-white" href="https://mail.google.com/mail/u/0/#inbox">Mail</a></div>
-        <div class="in_list"><a class="text-white" href="https://drive.google.com/drive/u/0/my-drive">Drive</a></div>
-        <div class="in_list"><a class="text-white" href="https://calendar.google.com/calendar/u/0/r?pli=1">Calender</a></div>
-        <div class="in_list"><a class="text-white" href="https://en.wikipedia.org/wiki/Main_Page">Wiki</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://mail.google.com/mail/u/0/#inbox">Mail</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://drive.google.com/drive/u/0/my-drive">Drive</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://calendar.google.com/calendar/u/0/r?pli=1">Calender</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://en.wikipedia.org/wiki/Main_Page">Wiki</a></div>
       </p>
     </div>
   </div>
   <div class="col card text-center text-white bg-dark mx-2" style="width: 18rem">
-      <h5 class="card-header">Tech</h5>
+      <h5 class="card-header display-6">Tech</h5>
     <div class="card-body">
       <p class="card-text">
-        <div class="in_list"><a class="text-white" href="https://github.com/">GitHub</a></div>
-        <div class="in_list"><a class="text-white" href="https://www.w3schools.com/">W3C</a></div>
-        <div class="in_list"><a class="text-white" href="https://www.udemy.com/">Udemy</a></div>
-        <div class="in_list"><a class="text-white" href="https://free4arab.net/">Free4arab</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://github.com/">GitHub</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.w3schools.com/">W3C</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.udemy.com/">Udemy</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://free4arab.net/">Free4arab</a></div>
       </p>
     </div>
   </div>
   </div>
 
-  <div class="container row my-4">
+  <div class="container row">
   <div class="col card text-center text-white bg-dark mx-2" style="width: 18rem">
-      <h5 class="card-header">Fun</h5>
+      <h5 class="card-header display-6">Fun</h5>
     <div class="card-body">
       <p class="card-text">
-        <div class="in_list"><a class="text-white" href="https://www.netflix.com/browse">Netflix</a></div>
-        <div class="in_list"><a class="text-white" href="https://www.faselhd.pro/home">FaselHD</a></div>
-        <div class="in_list"><a class="text-white" href="https://unsplash.com/">UnSplash</a></div>
-        <div class="in_list"><a class="text-white" href="https://www.figma.com">Figma</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.netflix.com/browse">Netflix</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.faselhd.pro/home">FaselHD</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://unsplash.com/">UnSplash</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.figma.com">Figma</a></div>
       </p>
     </div>
   </div>
   <div class="col card text-center text-white bg-dark mx-2" style="width: 18rem">
-      <h5 class="card-header">World</h5>
+      <h5 class="card-header display-6">World</h5>
     <div class="card-body">
       <p class="card-text">
-        <div class="in_list"><a class="text-white" href="https://www.reddit.com/">Reddit</a></div>
-        <div class="in_list"><a class="text-white" href="https://www.reddit.com/r/unixporn/">r/unixporn</a></div>
-        <div class="in_list"><a class="text-white" href="https://twitter.com/">Twitter</a></div>
-        <div class="in_list"><a class="text-white" href="https://translate.google.com/">Translate</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.reddit.com/">Reddit</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://www.reddit.com/r/unixporn/">r/unixporn</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://twitter.com/">Twitter</a></div>
+        <div class="in_list lead"><a class="text-white" href="https://translate.google.com/">Translate</a></div>
       </p>
     </div>
     </div>

@@ -32,6 +32,33 @@ function displayClock() {
     hh = hh ? hh : 12; //show mod 0 as 12
   }
 
+  let data;
+  let data_style;
+  if (ampm == "AM") data = "Good Morning";
+  else {
+    if ("0" <= data && data <= "12") data = "Good AfterNoon";
+    else data = "Good Night";
+  }
+
+  document.getElementById("data").innerText = data;
+
+  if (data === "Good Morning") {
+    document.getElementById("data").classList.add("bg-light");
+    document.getElementById("data").classList.add("rounded-pill");
+    document.getElementById("data").classList.add("p-4");
+  }
+  if (data === "Good Night") {
+    document.getElementById("data").classList.add("bg-dark");
+    document.getElementById("data").classList.add("rounded-pill");
+    document.getElementById("data").classList.add("p-4");
+    document.getElementById("data").classList.add("text-white");
+  }
+  if (data === "Good AfterNoon") {
+    document.getElementById("data").classList.add("bg-warning");
+    document.getElementById("data").classList.add("rounded-pill");
+    document.getElementById("data").classList.add("p-4");
+  }
+
   document.getElementById("hour").innerText = hh;
   document.getElementById("separator").innerHTML = " : ";
   document.getElementById("minutes").innerText = min + ampm;
