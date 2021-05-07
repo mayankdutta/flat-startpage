@@ -17,8 +17,10 @@
   class="container bg-secondary"
   style="
     display: grid;
-    grid-template-rows: 25vh 25vh 25vh 25vh;
-    margin-top: 3vh;
+    grid-template-rows: auto auto auto;
+    row-gap: 9vh;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
   "
 >
   <div
@@ -28,18 +30,20 @@
       grid-template-columns: auto;
       grid-template-rows: auto;
       justify-content: center;
+      row-gap: 4vh;
+
       align-items: center;
       justify-items: center;
     "
   >
     <!-- <img class="pic" style=" border-radius: 180px; height: 150px; width: 150px; margin-right: 20px; " src="images/pic.png" /> -->
-    <div class="display-4">
+    <div class="display-1">
       Hi, User
-      <span id="data" class="display-2"></span>
+      <span id="data" class="display-1"></span>
     </div>
-    <div class="info" style="">
+    <div class="info" style="align-self: center">
       <div
-        class="clock lead"
+        class="clock display-5"
         style="
           display: grid;
           grid-template-columns: auto auto auto;
@@ -74,7 +78,7 @@
   <form
     id="form"
     role="search"
-    style="display: flex; justify-content: center; margin-top: 40px"
+    style="display: grid; justify-content: center; align-content: center"
   >
     <div class="middle">
       <input
@@ -83,7 +87,7 @@
         id="query"
         name="q"
         placeholder="Search With DuckDuckGo"
-        style="width: 60vh; height: 6vh"
+        style="width: 40vh; height: 6vh"
       />
     </div>
     <script>
@@ -101,7 +105,18 @@
     </script>
   </form>
 
-  <div class="container row">
+  <div
+    class=""
+    style="
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      row-gap: 2rem;
+
+      justify-items: start;
+      align-items: center;
+    "
+  >
     <div
       class="col card text-center text-white bg-dark mx-2"
       style="width: 18rem"
@@ -158,9 +173,6 @@
         <!--            </p>-->
       </div>
     </div>
-  </div>
-
-  <div class="container row my-4">
     <div
       class="col card text-center text-white bg-dark mx-2"
       style="width: 18rem"
