@@ -34,9 +34,9 @@ function displayClock() {
 
   let data;
   let data_style;
-  if (ampm == "AM") data = "Good Morning";
+  if (ampm == " AM") data = "Good Morning";
   else {
-    if ("0" <= data && data <= "12") data = "Good AfterNoon";
+    if ("0" <= hh && hh <= "12") data = "Good AfterNoon";
     else data = "Good Night";
   }
 
